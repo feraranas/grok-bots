@@ -1,14 +1,32 @@
-# AI Researcher (Grok Bot backup)
+# grok-bots
 
-Portable recipe for recreating the **AI Researcher** Grok Bot: technical deep-dives + weekday X Following digests with controlled tags and low-cost SQLite search.
+Private git home for **all** of Ferdinand's Grok Bot recipes. Each agent lives under `agents/<slug>/` so this repo scales past a single bot.
 
-## Pair with
+## Layout
 
-- Digest archive: https://github.com/feraranas/x-following-digests (`TAGS.md`, `SCHEMA.md`, `tools/search.py`)
-- Grok Bot template: the published **AI Researcher** template (import from Grok Bot)
+```
+agents/
+  ai-researcher/     # technical deep-dives + X Following digests
+    BOT.md           # portable recipe (profile, memories, skills, routines)
+    README.md
+  # add more: chief-of-staff/, jordan-belfort/, …
+```
 
-## Contents
+## Agents
 
-- `BOT.md` — scrubbed memories, skill, and routine job text
+| Slug | Role |
+|------|------|
+| [`ai-researcher`](agents/ai-researcher/) | Architectures / APIs / systems deep-dives + weekday X Following digests |
 
-This repo is a human-readable git backup. Prefer importing the Grok Bot template for a one-click recreate; use this repo for offline/git history.
+## What does *not* live here
+
+- **X digests ledger:** [feraranas/x-following-digests](https://github.com/feraranas/x-following-digests) (public) — `digests/`, `index.jsonl`, `TAGS.md`, `tools/search.py`. Keep that repo separate; link from agent READMEs.
+
+## Adding an agent
+
+1. Create `agents/<kebab-slug>/`.
+2. Add `BOT.md` (profile, durable conventions, skills, routine job text — scrub secrets).
+3. Add a short `README.md` with pair-with links (templates, related repos).
+4. Link the row in this root README table.
+
+Prefer the published Grok Bot template for one-click recreate; use this repo for offline/git history across every bot.
