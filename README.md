@@ -2,6 +2,8 @@
 
 Private git home for **all** of Ferdinand's Grok Bot recipes. Each agent lives under `agents/<slug>/` so this repo scales past a single bot.
 
+Agent data lives in `/home/box/agent-data/workflows` within the computer at grok bot.
+
 ## Layout
 
 ```
